@@ -1,0 +1,159 @@
+.teamsList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.teamCard {
+    display: grid;
+    grid-template-columns: 80px 1fr auto;
+    gap: 24px;
+    align-items: center;
+    background: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    border-radius: var(--radius-lg);
+    padding: 24px 28px;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.teamCard:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateX(4px);
+}
+
+.teamImageWrapper {
+    width: 80px;
+    height: 80px;
+    border-radius: var(--radius-md);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--dark-bg);
+    border: 1px solid var(--dark-border);
+}
+
+.teamImage {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+}
+
+.teamCard:hover .teamImage {
+    transform: scale(1.1);
+}
+
+.teamImageOverlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6));
+    z-index: 1;
+}
+
+.highlight {
+    border-color: rgba(232, 115, 10, 0.4);
+    background: rgba(232, 115, 10, 0.04);
+}
+
+.teamAccent {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+}
+
+.teamEmoji {
+    font-size: 1.8rem;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.teamInfo {
+    flex: 1;
+}
+
+.teamName {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.teamDrivers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.driver {
+    font-size: 0.78rem;
+    color: var(--gray-light);
+    background: rgba(255, 255, 255, 0.04);
+    padding: 4px 10px;
+    border-radius: 12px;
+    border: 1px solid var(--dark-border);
+}
+
+.teamMeta {
+    display: flex;
+    gap: 24px;
+    flex-shrink: 0;
+}
+
+.metaItem {
+    text-align: center;
+}
+
+.metaLabel {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 0.6rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-bottom: 4px;
+}
+
+.metaValue {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+@media (max-width: 900px) {
+    .teamCard {
+        grid-template-columns: 80px 1fr;
+    }
+
+    .teamMeta {
+        display: none;
+    }
+}
+
+@media (max-width: 560px) {
+    .teamCard {
+        grid-template-columns: 1fr;
+        padding: 24px;
+        text-align: center;
+    }
+
+    .teamImageWrapper {
+        margin: 0 auto 16px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .teamDrivers {
+        justify-content: center;
+    }
+}

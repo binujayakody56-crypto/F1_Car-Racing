@@ -1,0 +1,614 @@
+/* ============================================================
+   HOME PAGE STYLES
+   ============================================================ */
+
+/* Hero */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding-top: 0;
+}
+
+.heroBackground {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.heroVideo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.35;
+    z-index: 0;
+}
+
+.heroGrid {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(232, 115, 10, 0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(232, 115, 10, 0.07) 1px, transparent 1px);
+    background-size: 60px 60px;
+}
+
+.heroGlow1 {
+    position: absolute;
+    left: -10%;
+    top: 20%;
+    width: 60%;
+    height: 60%;
+    background: radial-gradient(ellipse, rgba(232, 115, 10, 0.2) 0%, transparent 65%);
+    filter: blur(40px);
+}
+
+.heroGlow2 {
+    position: absolute;
+    right: 0;
+    bottom: 10%;
+    width: 40%;
+    height: 50%;
+    background: radial-gradient(ellipse, rgba(232, 115, 10, 0.1) 0%, transparent 70%);
+    filter: blur(60px);
+}
+
+.speedLines {
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(90deg,
+            transparent,
+            transparent 200px,
+            rgba(232, 115, 10, 0.02) 200px,
+            rgba(232, 115, 10, 0.02) 201px);
+}
+
+.heroContent {
+    position: relative;
+    z-index: 2;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+    flex: 1;
+    padding-top: var(--nav-height);
+}
+
+.heroBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(232, 115, 10, 0.12);
+    border: 1px solid rgba(232, 115, 10, 0.3);
+    color: var(--orange-light);
+    font-family: var(--font-heading);
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    padding: 8px 16px;
+    border-radius: 20px;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    animation: fadeIn 0.5s ease;
+}
+
+.badgeDot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--orange);
+    animation: pulse 2s ease infinite;
+}
+
+.heroNumber {
+    font-family: var(--font-heading);
+    font-size: clamp(6rem, 18vw, 16rem);
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 2px rgba(232, 115, 10, 0.2);
+    line-height: 0.85;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    pointer-events: none;
+    user-select: none;
+    animation: fadeIn 1s ease;
+}
+
+.heroTitle {
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 8vw, 7rem);
+    font-weight: 900;
+    color: var(--white);
+    line-height: 0.95;
+    margin-bottom: 24px;
+    animation: slideUp 0.7s ease;
+}
+
+.heroTitleOrange {
+    color: var(--orange);
+}
+
+.heroSubtitle {
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    color: var(--gray-light);
+    max-width: 480px;
+    line-height: 1.7;
+    margin-bottom: 36px;
+    animation: slideUp 0.8s ease;
+}
+
+.heroActions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    animation: slideUp 0.9s ease;
+}
+
+.heroScrollHint {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 48px;
+    color: var(--gray);
+    font-size: 0.75rem;
+    font-family: var(--font-heading);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    animation: fadeIn 1.2s ease;
+}
+
+.scrollIcon {
+    animation: float 2s ease-in-out infinite;
+    display: inline-block;
+}
+
+.heroRight {
+    position: absolute;
+    right: 8%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.heroCard {
+    background: rgba(232, 115, 10, 0.1);
+    border: 2px solid rgba(232, 115, 10, 0.4);
+    border-radius: var(--radius-lg);
+    padding: 24px 32px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    animation: glow 3s ease-in-out infinite;
+}
+
+.cardNumber {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: var(--orange);
+    line-height: 1;
+}
+
+.cardLabel {
+    font-family: var(--font-heading);
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    color: var(--gray-light);
+    text-transform: uppercase;
+    margin-top: 6px;
+}
+
+.heroRingOuter {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid rgba(232, 115, 10, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: spin 8s linear infinite;
+}
+
+.heroRingInner {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px dashed rgba(232, 115, 10, 0.5);
+}
+
+/* Stats Banner */
+.statsBanner {
+    padding: 48px 0;
+    background: linear-gradient(135deg, rgba(232, 115, 10, 0.08) 0%, rgba(10, 10, 10, 0) 100%);
+    border-top: 1px solid var(--dark-border);
+    border-bottom: 1px solid var(--dark-border);
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0;
+}
+
+.statCard {
+    padding: 24px 16px;
+    text-align: center;
+    border-right: 1px solid var(--dark-border);
+    transition: var(--transition);
+}
+
+.statCard:last-child {
+    border-right: none;
+}
+
+.statCard:hover {
+    background: rgba(232, 115, 10, 0.05);
+}
+
+.statValue {
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 900;
+    color: var(--orange);
+    line-height: 1;
+}
+
+.statLabel {
+    font-family: var(--font-heading);
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--white);
+    margin: 8px 0 4px;
+}
+
+.statSub {
+    font-size: 0.72rem;
+    color: var(--gray);
+}
+
+/* Timeline */
+.timelineSection {
+    background: var(--dark-bg);
+}
+
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.timelineLine {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 30px;
+    width: 2px;
+    background: linear-gradient(180deg, var(--orange) 0%, var(--dark-border) 100%);
+    transform: translateX(-50%);
+}
+
+.timelineItem {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 32px;
+    position: relative;
+    align-items: flex-start;
+}
+
+.timelineLeft {
+    flex-direction: row-reverse;
+    padding-right: calc(50% + 32px);
+    text-align: right;
+}
+
+.timelineRight {
+    padding-left: calc(50% + 32px);
+}
+
+.timelineContent {
+    background: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    border-radius: var(--radius-md);
+    padding: 18px 20px;
+    flex: 1;
+    transition: var(--transition);
+}
+
+.timelineContent:hover {
+    border-color: var(--orange);
+    box-shadow: var(--shadow-hover);
+}
+
+.timelineIcon {
+    font-size: 1.2rem;
+}
+
+.timelineYear {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--orange);
+    letter-spacing: 0.1em;
+    margin: 6px 0 4px;
+}
+
+.timelineEvent {
+    font-size: 0.88rem;
+    color: var(--gray-light);
+    line-height: 1.5;
+}
+
+.timelineDot {
+    display: none;
+}
+
+.timelineCta {
+    text-align: center;
+    margin-top: 48px;
+}
+
+/* Championships */
+.champSection {
+    background: var(--black);
+}
+
+.champGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.champCard {
+    background: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    border-radius: var(--radius-lg);
+    padding: 28px 20px;
+    text-align: center;
+    transition: var(--transition);
+    cursor: default;
+}
+
+.champCard:hover {
+    border-color: var(--orange);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+.champCardTbc {
+    border-style: dashed;
+    border-color: rgba(232, 115, 10, 0.3);
+    background: rgba(232, 115, 10, 0.04);
+}
+
+.champTrophy {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.champYear {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--orange);
+}
+
+.champTeam {
+    font-size: 0.75rem;
+    color: var(--gray);
+    margin-top: 6px;
+    font-family: var(--font-heading);
+    letter-spacing: 0.08em;
+}
+
+/* News */
+.newsSection {
+    background: var(--dark-bg);
+}
+
+.newsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.newsCard {
+    display: flex;
+    flex-direction: column;
+}
+
+.newsMeta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.newsDate {
+    font-size: 0.72rem;
+    color: var(--gray);
+    font-family: var(--font-heading);
+    letter-spacing: 0.08em;
+}
+
+.newsTitle {
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.newsExcerpt {
+    font-size: 0.83rem;
+    color: var(--gray);
+    line-height: 1.65;
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.newsReadMore {
+    font-family: var(--font-heading);
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--orange);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: var(--transition-fast);
+}
+
+.newsReadMore:hover {
+    gap: 10px;
+}
+
+/* Car CTA */
+.carCta {
+    padding: 100px 0;
+    background: linear-gradient(135deg, rgba(232, 115, 10, 0.06), rgba(10, 10, 10, 0));
+    border-top: 1px solid var(--dark-border);
+    border-bottom: 1px solid var(--dark-border);
+}
+
+.carCtaContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+    flex-wrap: wrap;
+}
+
+.carCtaVisual {
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.carCtaNumber {
+    font-family: var(--font-heading);
+    font-size: clamp(4rem, 8vw, 7rem);
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 3px rgba(232, 115, 10, 0.5);
+    line-height: 1;
+    margin-bottom: 24px;
+}
+
+.carCtaNumber span {
+    color: var(--orange);
+    -webkit-text-stroke: 0;
+}
+
+.carCtaSpecs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.specItem {
+    background: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    border-radius: var(--radius-md);
+    padding: 14px 18px;
+    text-align: left;
+}
+
+.specLabel {
+    font-size: 0.65rem;
+    font-family: var(--font-heading);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-bottom: 4px;
+}
+
+.specValue {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--white);
+}
+
+/* Mission Section */
+.missionSection {
+    padding: 80px 0;
+    background: var(--black);
+    text-align: center;
+}
+
+.missionContent {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .statsGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .champGrid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .heroNumber {
+        display: none;
+    }
+
+    .heroRight {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .statsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .newsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .champGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .carCtaContent {
+        flex-direction: column;
+    }
+
+    .timelineLine {
+        left: 20px;
+    }
+
+    .timelineLeft,
+    .timelineRight {
+        padding-left: 56px;
+        padding-right: 0;
+        text-align: left;
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 480px) {
+    .statsGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .champGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

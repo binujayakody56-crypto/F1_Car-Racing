@@ -1,0 +1,240 @@
+.quoteSection {
+    padding: 60px 0;
+    background: linear-gradient(135deg, rgba(232, 115, 10, 0.06), rgba(10, 10, 10, 0));
+    border-bottom: 1px solid var(--dark-border);
+}
+
+.quote {
+    max-width: 780px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+.quoteMarks {
+    font-family: Georgia, serif;
+    font-size: 8rem;
+    line-height: 0.5;
+    color: rgba(232, 115, 10, 0.2);
+    display: block;
+    margin-bottom: 16px;
+}
+
+.quoteText {
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    font-style: italic;
+    color: var(--white);
+    line-height: 1.65;
+    margin-bottom: 20px;
+}
+
+.quoteAuthor {
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--orange);
+}
+
+/* Chapters */
+.chapter {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 60px;
+    margin-bottom: 80px;
+    align-items: start;
+    padding-bottom: 80px;
+    border-bottom: 1px solid var(--dark-border);
+}
+
+.chapter:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.chapterReverse {
+    grid-template-columns: 1fr 260px;
+}
+
+.chapterReverse .chapterVisual {
+    order: 2;
+}
+
+.chapterReverse .chapterContent {
+    order: 1;
+}
+
+.chapterVisual {
+    background: var(--dark-card);
+    border: 1px solid;
+    border-radius: var(--radius-xl);
+    padding: 36px 24px;
+    text-align: center;
+    position: sticky;
+    top: calc(var(--nav-height) + 20px);
+}
+
+.chapterIcon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 2rem;
+}
+
+.chapterYears {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+}
+
+.chapterEra {
+    font-family: var(--font-heading);
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gray);
+}
+
+.chapterContent {}
+
+.chapterTitle {
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    color: var(--white);
+    margin-bottom: 24px;
+}
+
+.chapterPara {
+    font-size: 0.95rem;
+    color: var(--gray-light);
+    line-height: 1.85;
+    margin-bottom: 20px;
+}
+
+/* Records */
+.recordsSection {
+    background: var(--dark-bg);
+}
+
+.recordsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.recordCard {
+    text-align: center;
+}
+
+.recordValue {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 900;
+    color: var(--orange);
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.recordName {
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--white);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.recordPrev {
+    font-size: 0.75rem;
+    color: var(--gray);
+}
+
+/* Legacy */
+.legacySection {
+    background: var(--black);
+}
+
+.legacyContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.legacyStats {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.legacyStat {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    border-radius: var(--radius-md);
+    padding: 20px 24px;
+    transition: var(--transition);
+}
+
+.legacyStat:hover {
+    border-color: var(--orange);
+}
+
+.legacyNum {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: var(--orange);
+    flex-shrink: 0;
+    min-width: 80px;
+}
+
+.legacyLabel {
+    font-size: 0.85rem;
+    color: var(--gray-light);
+}
+
+@media (max-width: 900px) {
+
+    .chapter,
+    .chapterReverse {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .chapterReverse .chapterVisual {
+        order: 0;
+    }
+
+    .chapterReverse .chapterContent {
+        order: 0;
+    }
+
+    .chapterVisual {
+        position: static;
+    }
+
+    .recordsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .legacyContent {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 560px) {
+    .recordsGrid {
+        grid-template-columns: 1fr;
+    }
+}

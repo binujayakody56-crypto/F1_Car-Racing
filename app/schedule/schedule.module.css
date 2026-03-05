@@ -1,0 +1,77 @@
+.raceList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.raceCard {
+    display: grid;
+    grid-template-columns: 50px 50px 1fr auto 100px;
+    gap: 16px;
+    align-items: center;
+    background: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    border-radius: var(--radius-md);
+    padding: 16px 20px;
+    transition: var(--transition);
+}
+
+.raceCard:hover {
+    border-color: var(--orange);
+    transform: translateX(4px);
+}
+
+.past {
+    opacity: 0.6;
+}
+
+.raceRound {
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--orange);
+    letter-spacing: 0.1em;
+}
+
+.raceFlag {
+    font-size: 1.5rem;
+}
+
+.raceInfo {}
+
+.raceName {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 4px;
+}
+
+.raceCircuit {
+    font-size: 0.76rem;
+    color: var(--gray);
+}
+
+.raceDate {
+    font-family: var(--font-heading);
+    font-size: 0.72rem;
+    color: var(--gray-light);
+    letter-spacing: 0.05em;
+    text-align: right;
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .raceCard {
+        grid-template-columns: 40px 40px 1fr;
+    }
+
+    .raceDate,
+    .raceCard>*:last-child {
+        display: none;
+    }
+
+    .raceDate {
+        display: none;
+    }
+}

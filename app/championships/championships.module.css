@@ -1,0 +1,153 @@
+.countBanner {
+    padding: 40px 0;
+    background: rgba(232, 115, 10, 0.06);
+    border-bottom: 1px solid var(--dark-border);
+}
+
+.countGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+}
+
+.countItem {
+    text-align: center;
+    padding: 20px;
+    border-right: 1px solid var(--dark-border);
+}
+
+.countItem:last-child {
+    border-right: none;
+}
+
+.countNum {
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 900;
+    color: var(--orange);
+}
+
+.countLabel {
+    font-size: 0.75rem;
+    color: var(--gray);
+    margin-top: 6px;
+}
+
+/* Championship Cards */
+.champList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.champCard {
+    display: grid;
+    grid-template-columns: 120px 1fr auto;
+    gap: 32px;
+    align-items: center;
+    background: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    border-radius: var(--radius-lg);
+    padding: 28px 32px;
+    transition: var(--transition);
+}
+
+.champCard:hover {
+    border-color: var(--orange);
+    box-shadow: var(--shadow-hover);
+}
+
+.champCardTbc {
+    border-style: dashed;
+    border-color: rgba(220, 20, 60, 0.3);
+    background: rgba(220, 20, 60, 0.04);
+}
+
+.champLeft {
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.champTrophy {
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+}
+
+.champYear {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.champInfo {
+    flex: 1;
+}
+
+.champTop {
+    margin-bottom: 12px;
+}
+
+.champHighlight {
+    font-size: 0.9rem;
+    color: var(--white);
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.champFinal {
+    font-size: 0.8rem;
+    color: var(--gray);
+    line-height: 1.5;
+}
+
+.champFinal strong {
+    color: var(--orange-light);
+}
+
+.champStats {
+    display: flex;
+    gap: 20px;
+    flex-shrink: 0;
+}
+
+.cStat {
+    text-align: center;
+}
+
+.cStatNum {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--orange);
+}
+
+.cStatLbl {
+    font-size: 0.65rem;
+    font-family: var(--font-heading);
+    letter-spacing: 0.08em;
+    color: var(--gray);
+    text-transform: uppercase;
+    margin-top: 4px;
+}
+
+@media (max-width: 900px) {
+    .countGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .champCard {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .champStats {
+        justify-content: center;
+    }
+
+    .champLeft {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+}

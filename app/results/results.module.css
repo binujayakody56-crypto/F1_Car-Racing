@@ -1,0 +1,107 @@
+.raceResult {
+    background: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    margin-bottom: 40px;
+}
+
+.raceHeader {
+    margin-bottom: 24px;
+}
+
+.raceMeta {
+    font-size: 0.75rem;
+    color: var(--gray);
+    font-family: var(--font-heading);
+    letter-spacing: 0.1em;
+    margin-bottom: 6px;
+}
+
+.raceName {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    color: var(--white);
+}
+
+.podium {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.podiumCard {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--dark-border);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.podiumCard:hover {
+    border-color: var(--orange);
+}
+
+.lhCard {
+    background: rgba(232, 115, 10, 0.06);
+    border-color: rgba(232, 115, 10, 0.4);
+}
+
+.podiumMedal {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+
+.podiumPos {
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    color: var(--orange);
+    letter-spacing: 0.15em;
+    margin-bottom: 6px;
+}
+
+.podiumNat {
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+.podiumDriver {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 4px;
+}
+
+.podiumTeam {
+    font-size: 0.75rem;
+    color: var(--gray);
+    margin-bottom: 8px;
+}
+
+.podiumTime {
+    font-family: var(--font-heading);
+    font-size: 0.78rem;
+    color: var(--orange-light);
+}
+
+.fastestLap {
+    background: rgba(30, 136, 229, 0.1);
+    border: 1px solid rgba(30, 136, 229, 0.3);
+    border-radius: var(--radius-sm);
+    padding: 12px 16px;
+    font-size: 0.82rem;
+    color: var(--gray-light);
+}
+
+.fastestLap strong {
+    color: var(--white);
+}
+
+@media (max-width: 600px) {
+    .podium {
+        grid-template-columns: 1fr;
+    }
+}

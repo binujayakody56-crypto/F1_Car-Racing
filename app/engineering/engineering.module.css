@@ -1,0 +1,206 @@
+.specsBar {
+    padding: 40px 0;
+    background: rgba(232, 115, 10, 0.06);
+    border-bottom: 1px solid var(--dark-border);
+}
+
+.specsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+}
+
+.specCard {
+    text-align: center;
+    padding: 20px;
+    border-right: 1px solid var(--dark-border);
+}
+
+.specCard:last-child {
+    border-right: none;
+}
+
+.specValue {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--orange);
+    margin-bottom: 6px;
+}
+
+.specLabel {
+    font-size: 0.72rem;
+    color: var(--gray);
+}
+
+/* Featured Visual */
+.featuredVisual {
+    margin-bottom: 60px;
+}
+
+.featuredImageWrapper {
+    width: 100%;
+    height: 400px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--dark-border);
+    background: var(--dark-bg);
+}
+
+.featuredImage {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.8s ease;
+}
+
+.featuredImageWrapper:hover .featuredImage {
+    transform: scale(1.05);
+}
+
+/* Systems */
+.systemsList {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.systemCard {
+    background: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.systemCard:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+.systemHeader {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 24px 28px;
+    border-left: 4px solid;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.systemIcon {
+    font-size: 2rem;
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+
+.systemTitle {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    color: var(--white);
+    margin-bottom: 8px;
+}
+
+.systemIntro {
+    font-size: 0.88rem;
+    color: var(--gray-light);
+    line-height: 1.65;
+}
+
+.systemDetails {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--dark-border);
+    border-top: 1px solid var(--dark-border);
+}
+
+.detail {
+    background: var(--dark-card);
+    padding: 16px 20px;
+}
+
+.detailLabel {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 6px;
+}
+
+.detailValue {
+    display: block;
+    font-size: 0.82rem;
+    color: var(--gray-light);
+    line-height: 1.5;
+}
+
+/* Lewis Edge */
+.lewisSection {
+    background: var(--dark-bg);
+}
+
+.edgeGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.edgeCard {}
+
+.edgeTitleRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.edgeTitle {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    color: var(--white);
+}
+
+.edgeRating {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--orange);
+}
+
+.ratingBar {
+    height: 4px;
+    background: var(--dark-border);
+    border-radius: 2px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.ratingFill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--orange), var(--orange-light));
+    border-radius: 2px;
+    transition: width 1s ease;
+}
+
+.edgeDesc {
+    font-size: 0.82rem;
+    color: var(--gray);
+    line-height: 1.65;
+}
+
+@media (max-width: 900px) {
+    .specsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .systemDetails {
+        grid-template-columns: 1fr;
+    }
+
+    .edgeGrid {
+        grid-template-columns: 1fr;
+    }
+}

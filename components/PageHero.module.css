@@ -1,0 +1,113 @@
+.hero {
+    position: relative;
+    padding: 80px 0 70px;
+    overflow: hidden;
+}
+
+.bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.bgVideoElement {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.35;
+    /* Keep it subtle behind the content */
+    z-index: 0;
+}
+
+.grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(232, 115, 10, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(232, 115, 10, 0.06) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
+.gradientLeft {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 40%;
+    background: radial-gradient(ellipse at left center, rgba(232, 115, 10, 0.15) 0%, transparent 70%);
+}
+
+.gradientRight {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 30%;
+    background: radial-gradient(ellipse at right center, rgba(232, 115, 10, 0.07) 0%, transparent 70%);
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 1;
+}
+
+.badge {
+    display: inline-block;
+    background: rgba(232, 115, 10, 0.15);
+    border: 1px solid var(--orange);
+    color: var(--orange);
+    font-family: var(--font-heading);
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    animation: fadeIn 0.5s ease;
+}
+
+.title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 5vw, 3.8rem);
+    font-weight: 900;
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 16px;
+    animation: slideUp 0.6s ease;
+}
+
+.highlight {
+    color: var(--orange);
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: var(--gray-light);
+    max-width: 560px;
+    line-height: 1.7;
+    animation: slideUp 0.7s ease;
+}
+
+.extra {
+    margin-top: 24px;
+    animation: slideUp 0.8s ease;
+}
+
+.bottomLine {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--orange), transparent);
+    margin-top: 32px;
+    border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 0 50px;
+    }
+}

@@ -1,0 +1,184 @@
+.plansGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.planCard {
+    background: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    border-radius: var(--radius-lg);
+    padding: 32px 28px;
+    position: relative;
+    transition: var(--transition);
+}
+
+.planCard:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+.highlighted {
+    border-color: var(--orange);
+    background: rgba(232, 115, 10, 0.06);
+}
+
+.popularBadge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--orange);
+    color: var(--white-pure);
+    font-family: var(--font-heading);
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 4px 14px;
+    border-radius: 12px;
+    white-space: nowrap;
+}
+
+.planName {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 12px;
+}
+
+.planPrice {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--white);
+    margin-bottom: 24px;
+}
+
+.featureList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 28px;
+}
+
+.featureItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.85rem;
+    color: var(--gray-light);
+}
+
+.checkmark {
+    color: var(--orange);
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.planCta {
+    width: 100%;
+    justify-content: center;
+}
+
+/* Video Grid */
+.videoGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.videoCard {
+    background: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.videoCard:hover {
+    border-color: var(--orange);
+    transform: translateY(-4px);
+}
+
+.videoThumb {
+    height: 160px;
+    background: linear-gradient(135deg, #1a0a00, #3D1900);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.videoGradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(232, 115, 10, 0.2), rgba(0, 0, 0, 0.6));
+}
+
+.playButton {
+    position: relative;
+    z-index: 1;
+    width: 48px;
+    height: 48px;
+    background: rgba(232, 115, 10, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: white;
+    padding-left: 4px;
+    transition: var(--transition);
+}
+
+.videoCard:hover .playButton {
+    background: var(--orange);
+    transform: scale(1.1);
+}
+
+.videoDuration {
+    position: absolute;
+    bottom: 8px;
+    right: 10px;
+    font-family: var(--font-heading);
+    font-size: 0.65rem;
+    color: var(--white);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.videoInfo {
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.videoTitle {
+    font-family: var(--font-heading);
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+    .plansGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .videoGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 560px) {
+    .videoGrid {
+        grid-template-columns: 1fr;
+    }
+}
