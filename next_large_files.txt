@@ -1,5 +1,0 @@
-﻿56.02 MB - C:\Users\user\Desktop\My Websites\Antigravity Websites\Next.js projects\Project 1-7-F1 Car Racing- Website\lh44-site\.next\dev\cache\turbopack\23c46498\00001946.sst
-44.41 MB - C:\Users\user\Desktop\My Websites\Antigravity Websites\Next.js projects\Project 1-7-F1 Car Racing- Website\lh44-site\.next\dev\cache\turbopack\23c46498\00000064.sst
-15.92 MB - C:\Users\user\Desktop\My Websites\Antigravity Websites\Next.js projects\Project 1-7-F1 Car Racing- Website\lh44-site\.next\dev\cache\turbopack\23c46498\00000108.sst
-14.33 MB - C:\Users\user\Desktop\My Websites\Antigravity Websites\Next.js projects\Project 1-7-F1 Car Racing- Website\lh44-site\.next\dev\cache\turbopack\23c46498\00000067.sst
-11.96 MB - C:\Users\user\Desktop\My Websites\Antigravity Websites\Next.js projects\Project 1-7-F1 Car Racing- Website\lh44-site\.next\dev\cache\turbopack\23c46498\00001963.sst
